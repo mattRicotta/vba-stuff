@@ -7,10 +7,9 @@ Private Sub SearchBar_Change()
     Dim ct As Control
     
     Set ct = Me!SearchBar
-    searchFields = "Fields" '<----- Change this value to the fields being searched
     searchBarText = ct.Text
     
-    Me.Filter = keyWordFilter(searchBarText, searchFields)
+    Me.Filter = keyWordFilter(searchBarText, "Field1") '<---- list field names to be searched as strings
     Me.FilterOn = True
     
     ct = searchBarText
